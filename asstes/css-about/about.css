@@ -1,0 +1,1145 @@
+@charset "utf-8";
+/* ================== 
+comon
+====================*/
+:root {
+    --white: #FFF;
+    --italygreen:#009246;
+    --creamcolor:#FDF7F1;
+    --red:#CE2B37;
+    --black:#333333;
+    --contentWidth: 91.4%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:
+        'noto sans cjk jp',
+        'noto sans jp',
+        'Fira Sans',
+        sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--black, #333333);
+    background-color: var(--white, #FFF);
+    line-height: 1.5;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .forPC{display: none!important;}
+  }
+  @media screen and (min-width:769px) {
+    .forSP{display: none!important;}
+}
+
+.btndiv {
+    text-align: center;
+} 
+
+/* common PC */
+
+/* @media screen and (min-width:769px) {
+    .btndiv {
+        margin-left: 155px;
+    }
+} */
+
+
+
+  /* ====================
+header
+======================= */
+.header {
+    background-color: var(--white);
+    /* padding: 0 0 0 4.2%; */
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 76px;
+    height: 76px;
+}
+
+.header__topic a,
+.nav__topic a {
+    display: flex;
+    align-items: center;
+}
+
+.header__topic span,
+.nav__topic span {
+    font-size: 0.8rem;
+    letter-spacing: 1.6px;
+    margin: 0 17px 0 18px;
+}
+
+.nav {
+    background:var(--creamcolor);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+}
+
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    width: 76px;
+    height: 76px;
+}
+
+.nav__btn {
+    /* display: block; */
+    width: 84px;
+    height: 78px;
+}
+
+.nav__list {
+    margin: 0 auto;
+}
+
+.contactaddress {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 87.5px;;
+}
+
+
+.instawaku__nav {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    /* padding: 16px 22px; */
+    margin-top: 20px;
+}
+
+.header__instalogo {
+    width: 30px; 
+    height: 30px;
+}
+
+.instagram__click__f {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    margin-left: 20px;
+}
+
+.phone__txt__f {
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.header__phone__logo {
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav__item {
+    color: var(--black);
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.75;
+    margin-top: 11px;
+}
+
+.header__btn {
+    display: block;
+    width: 84px;
+    height: 84px;
+    position: fixed;
+    top: 0%;
+    left: 81%;
+}
+
+.nav.active {
+    transform: translateX(0);
+} 
+
+
+/* header pc */
+@media screen and (min-width:769px) {
+    .header {
+        width: auto;
+        height: 104px;
+        /* margin: 0 auto; */
+    }
+
+
+    .header__topic {
+        width: 104px;
+        height: auto;
+        margin-left: 17px;
+        
+    }
+
+    .nav {
+        background-color: var(--white);
+        width: auto;
+        height: auto;
+        padding: 0;
+        position: static;
+        transform: translateX(0);
+        display: flex;
+        flex: 1;
+    }
+
+
+    .nav__btn {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+    /* .nav__header {
+        display: none;
+    } */
+
+    .nav__logo {
+        display: none;
+    }
+ 
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 63px;
+        margin: 0 auto;
+    }
+
+    .nav__item {
+        text-align: center;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.51px;
+        /* border-bottom: #ff0000 solid; */
+    }
+
+    .nav__item:hover {
+       border-bottom: var(--red) solid;
+    }
+
+
+    /* .nav__item:nth-child(even){
+        border-bottom: green solid;
+    } */
+
+    .nav__item:nth-child(even):hover{
+        border-bottom: green solid;
+    }
+
+
+
+    .contactaddress {
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    
+    .t {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .instawaku__nav {
+        margin-top: 0;
+    }
+
+    .header__instalogo {
+        width: 20px; 
+        height: 20px;
+    }
+
+    .instagram__click__f {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.48px;
+        margin-left: 0;
+    }
+
+    .header__phone__logo{
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone__txt__f {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.64px;
+        margin-left: 15px;
+    }
+}
+/* ====================
+css記述　チャッピーaboutのところから
+======================= */
+.pcbr{
+  display: none;
+}
+
+/* アバウトセクション全体 */
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 60px 7.4vw;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* セクションタイトル */
+.kasoutitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 50.40px;
+}
+
+/* 枠 */
+.aboutwaku {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+}
+
+/* ピザ画像 */
+.summary__img {
+  margin: 0;
+}
+
+.kamayakipizza__img {
+  width: 320px;
+  max-width: 100%;
+  aspect-ratio: 319.5 / 229;
+  object-fit: cover; 
+  display: block;
+}
+
+/* テキスト全体 */
+.txt__all {
+  text-align: left;
+}
+
+/* タイトル文 */
+/* .about__title {
+  /* font-family: 'Noto Sans CJK JP', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.8;  */
+/* } */
+
+.about__line {
+  font-size: 2.4rem;
+  font-family: 'Noto Sans CJK JP', sans-serif;
+  font-weight: 700;
+  line-height: 1.8;
+  /* letter-spacing: 0.72px; */
+  margin: 0;
+}
+
+
+/* 説明文 */
+.summary__txt {
+  font-size: 1.4rem;
+  line-height: 28.42px;
+  letter-spacing: 0.28px;
+  margin-top: 30px;
+}
+
+.summary__txt__last {
+  font-size: 1.4rem;
+  line-height: 28.42px;
+  letter-spacing: 0.28px;
+  margin-top: 20px;
+}
+
+/* PC Ver */
+/* アバウトセクション全体 */
+@media screen and (min-width:769px) {
+  .summary {
+    /* PC版では横並びにするためflexの方向を変更
+    flex-direction: row; */
+    /* コンテンツを中央に配置するための調整 */
+    align-items: center;
+    justify-content: center;
+    /* max-width: 960px; デザインに合わせた最大幅 */
+    margin: 0 auto;
+    padding: 85px 16.6vw; /* PC版の余白を調整 */
+    gap: 85px; /* 画像とテキストの間の余白を調整 */
+  }
+
+  .kasoutitle {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 2.80px;
+  }
+
+  /* 枠 */
+  .aboutwaku {
+    flex-direction: row-reverse; /* PC版では画像とテキストを横並びにする */
+    gap: 70px;
+  }
+
+    /* ピザ画像 */
+  .summary__img {
+    flex-basis: 53%; /* 画像の幅をテキストと均等にする */
+  }
+
+  .kamayakipizza__img {
+    width: 100%;
+    max-width: none; /* スマホ版のmax-widthをリセット */
+  }
+    
+  /* * テキスト全体 */ 
+  .txt__all {
+    flex-basis: 50%; /* テキストの幅を画像と均等にする */
+  }
+    
+  /* * タイトル文 */ 
+  .about__line {
+    font-size: 2.4rem;
+    line-height: 43.20px;
+    letter-spacing: 0.72px; 
+  }
+
+  /* * 説明文 */ 
+  .summary__txt,
+  .summary__txt__last {
+    font-weight: 400;
+    font-size: 1.7rem; /* PC版ではフォントサイズを大きく */
+    line-height: 35.70px;
+}
+}
+
+/* ==================  */
+ /* 強みのコーナー  */
+/* ================== */
+.ourcraft {
+  padding: 60px 7.4vw;
+  background-color:var(--creamcolor);
+}
+
+/* リボン画像 */
+.ribon {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ourcraft__ribon {
+  width: 209px;
+  height: 60px;
+  /* object-fit: contain; */
+}
+
+/* セクションタイトル */
+.tokutyou {
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 34px;
+  letter-spacing: 0.34px;
+  margin-bottom: 54px;
+}
+
+.tokutyou::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 15px; /* 長さ */
+  height: 2px; /* 太さ */
+  background-color:var(--italygreen); /* 緑色 */
+  transform: translateY(-50%) rotate(62.35deg);
+  border-radius: 1px;
+}
+
+.tokutyou::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  width: 15px; /* 長さ */
+  height: 2px; /* 太さ */
+  background-color:var(--italygreen); /* 緑色 */
+  transform: rotate(-62.35deg);
+  border-radius: 1px;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.points__set {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* リスト全体 */
+/* .points {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  list-style: none; */
+  /* padding: 0;
+  margin: 0; */
+/* } */
+
+/* 各項目セット（ピザ生地 / 窯） */
+/* .points__set {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+} */
+
+/* 画像 */
+/* .kodawari__img {
+  margin-bottom: 16px;
+} */
+
+.pizzakiji__img{
+  /* width: 100%; */
+  max-width: 319px;
+  height: 322px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.kama__img {
+  width: 100%;
+  max-width: 257px;
+  aspect-ratio: 315 / 356; 
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* キャプション部分 */
+.about__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* タイトル */
+.about__kodawari__title {
+  position: relative;
+  background-color: var(--italygreen);
+  color: white;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family:  Noto Sans CJK JP;
+  letter-spacing: 0.28px;
+  width: 185px;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 32px; /* 左の丸分を確保 */
+  border-radius: 30px 0 0 30px;
+  display: inline-block;
+}
+
+.about__kodawari__title::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.about__kodawari__titletwo {
+  position: relative;
+  background-color: var(--red);
+  color: white;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family:  Noto Sans CJK JP;
+  letter-spacing: 0.32px;
+  width: 185px;
+  height: 34px;
+  line-height: 33px;
+  padding-left: 42px; /* 左の丸分を確保 */
+  border-radius: 30px 0 0 30px;
+  display: inline-block;
+}
+
+.about__kodawari__titletwo::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+/* テキスト */
+.kodawari__txt {
+  font-size: 1.4rem;
+  line-height: 28.42px;
+}
+
+/* * PC Ver */
+/* 強みのコーナー */
+@media screen and (min-width:769px) {
+  .ourcraft {
+    padding: 85px 16.6vw;
+    margin: 0 auto;
+  }
+
+  .ribon {
+    margin-bottom: 50px;
+  }
+
+  .ourcraft__ribon {
+    width: 29%;
+    height: 26%;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .tokutyou {
+    font-size: 2.4rem;
+    display: inline-block;
+  }
+
+  .tokutyou::before{
+    content: "";
+    position: absolute;
+    top: 42%;
+    left: -13%;
+    width: 32px; /* 長さ */
+    height: 2px; /* 太さ */
+    background-color:var(--italygreen); /* 緑色 */
+    transform: rotate(62.35deg) ;
+    border-radius: 1px;
+  }
+
+  .tokutyou::after {
+    content: "";
+    position: absolute;
+    top: 42%;
+    right: -15%;
+    width: 32px; /* 長さ */
+    height: 2px; /* 太さ */
+    background-color:var(--italygreen); /* 緑色 */
+    transform: rotate(-62.35deg);
+    border-radius: 1px;
+  }
+
+  /* リスト全体 */
+  .points {
+    max-width: 960px;
+    gap: 70px;
+    margin-top: 54px;
+  }
+   
+  /* 各項目セット（ピザ生地 / 窯） */
+  .points__set {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    /* flex: 1; */
+  }
+
+  .points__set:nth-of-type(2){
+    flex-direction: row-reverse;
+  }
+    
+    .kodawari__img {
+      /* width: 360px; */
+      max-width: 360px;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    /* 画像 */
+    .pizzakiji__img {
+      /* width: 100%; */
+      width: 273px;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .kama__img {
+      width: 100%;
+      max-width: 284px;
+      height: 355px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* キャプション部分 */
+    .about__caption {
+      align-items: flex-start; /* テキストを左寄せに */
+      max-width: 390px;
+    }
+    
+    /* タイトル */
+    /* .about__kodawari__title,
+    .about__kodawari__titletwo {
+        font-size: 2.4rem; /* PC版では少し大きく */
+     /* */ 
+
+    .about__kodawari__title {
+      font-size: 2rem;
+      /* font-weight: 500; */
+      line-height: 46px;
+      letter-spacing: 0.48px;
+      width: 280px;
+      height: 50px;
+      padding-left: 55px;
+    }
+
+    .about__kodawari__title::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .about__kodawari__titletwo {
+      font-size: 2rem;
+      line-height: 49px;
+      letter-spacing: 0.48px;
+      width: 280px;
+      height: 50px;
+      padding-left: 64px;
+    }
+
+
+    .about__kodawari__titletwo::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+
+    .kodawari__txt {
+      font-size: 1.6rem;
+      line-height: 30.08px;
+    }
+
+}
+
+/* ==================  */
+ /* コンセプトコーナー  */
+/* ================== */
+.concept {
+  padding: 60px 7.4vw;
+}
+
+/* .free__img {
+  margin-bottom: 30px;
+} */
+
+.winepeople__img {
+  width: 100%;
+  /* max-width: 295px; */
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.concept__erea {
+  text-align: left;
+  position: relative;
+}
+
+.concept__erea::before {
+  content: '';
+  display: inline-block;
+  background: url(../images-about/concept.png) no-repeat center / contain;
+  width: 352px;
+  height: 61px;
+  position: absolute;
+  z-index: -100;
+  top: 32%;
+  left: 36%;
+  transform: rotate(90deg)
+
+}
+
+.concept__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 43.20px;
+  letter-spacing: 0.72px;
+  margin-top: 54px;
+}
+
+.concept__txt {
+  font-size: 1.4rem;
+  line-height: 28.42px;
+  letter-spacing: 0.28px;
+  margin-top: 30px;
+}
+
+/* ==================  */
+/* * PC Ver */
+/* ==================  */
+/* コンセプトコーナー */
+@media screen and (min-width:769px) {
+ .pcbr {
+  display: block;
+ }
+
+  .concept {
+    padding: 85px 240px;
+  }
+
+  .conseptcontents {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .free__img {
+    width: 45%;
+    max-width: none;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .winepeople__img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+
+  .concept__erea {
+    flex-shrink: 0;
+    flex-basis: 50%;
+    /* width: 459px; */
+  }
+
+  .concept__erea::before {
+    content: '';
+    display: inline-block;
+    background: url(../images-about/concept.png) no-repeat center / contain;
+    width: 319px;
+    height: 56px;
+    position: absolute;
+    z-index: -100;
+    top: -13px;
+    left: 0;
+    transform: rotate(0deg);
+  }
+
+  .concept__title {
+    font-size: 2.4rem;
+    /* font-weight: 500; */
+    line-height: 43.20px;
+    letter-spacing: 0.72px;
+    margin-top: 85px; /* .conceptのpadding-topと同じ値を設定 */
+   margin-bottom: 30px; /* 「今日は家族で〜」のテキストとの間隔 */
+   position: relative; /* z-indexを有効にするため追加 */
+   z-index: 1; 
+  }
+
+  .concept__txt {
+    width: 419px;
+    font-size: 1.6rem;
+    line-height: 34.51px;
+    letter-spacing: 0.34px;
+    margin-top: 30px;
+  }
+}
+
+/* ==================  */
+ /* フッター*/
+/* ================== */
+.footer {
+    padding: 40px 0;
+    background-color: var(--creamcolor);
+    text-align: center;
+}
+
+.footer__group {
+    text-align: center;
+}
+
+.footer__logo {
+    max-width: 135px;
+    height: 135px;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu__item {
+    color: var(--black);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.contactaddress__last {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 87.5px;
+}
+
+.instawaku__footer {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: -15px;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+}
+
+.instagram__img {
+    min-width: 60px;
+    margin: 0;
+}
+
+.instagram a {
+    display: block;
+    text-align: left;
+    flex: 1;
+}
+
+.instagram__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.instagram__txt {
+    width: 100%;
+    text-align: left;
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.phone__img a {
+    display: block;
+    width: 60px;
+    text-align: left;
+}
+
+.phone__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.phone__txt {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    width: 100%;
+}
+
+.copy {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-top: 29px;
+}
+
+.copy__small {
+    font-size: 80%;
+}
+
+/* ==================  */
+/* * PC Ver */
+/* ==================  */
+/* フッター */
+@media screen and (min-width:769px) {
+    .footer {
+        padding: 0;
+    }
+
+    .footer__group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__topic {
+        padding: 17px;
+    }
+
+    .footer__logo {
+        max-width: 104px;
+        height: 104px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        gap: 63px;
+    }
+
+    .menu__item {
+        text-align: center;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.51px;
+        border-bottom: #ff0000 solid;
+    }
+
+    .menu__item:nth-child(even){
+        border-bottom: green solid;
+    }
+    
+
+    .contactaddress__last {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-right: 50px;
+    }
+
+    .instawaku__footer {
+        width: 0;
+    }
+
+    .instagram__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone {
+        margin-top: 6px;
+    }
+
+    .phone__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone__img {
+        margin-right: -23px;
+    }
+
+    .phone__txt {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.6px;
+        width: auto;
+    }
+}
+
+
