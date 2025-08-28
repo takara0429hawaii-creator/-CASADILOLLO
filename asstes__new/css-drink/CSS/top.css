@@ -1,0 +1,1928 @@
+@charset "utf-8";
+/* ================== 
+comon
+====================*/
+:root {
+    --white: #FFF;
+    --italygreen:#009246;
+    --creamcolor:#FDF7F1;
+    --red:#CE2B37;
+    --black:#333333;
+    --contentWidth: 91.4%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:
+        'noto sans cjk jp',
+        'noto sans jp',
+        'Fira Sans',
+        sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--black, #333333);
+    background-color: var(--white, #FFF);
+    line-height: 1.5;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .forPC{display: none!important;}
+  }
+  @media screen and (min-width:769px) {
+    .forSP{display: none!important;}
+}
+
+.btndiv {
+    text-align: center;
+} 
+
+/* common PC */
+
+/* @media screen and (min-width:769px) {
+    .btndiv {
+        margin-left: 155px;
+    }
+} */
+
+
+
+  /* ====================
+header
+======================= */
+.header {
+    background-color: var(--white);
+    /* padding: 0 0 0 4.2%; */
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 76px;
+    height: 76px;
+}
+
+.header__topic a,
+.nav__topic a {
+    display: flex;
+    align-items: center;
+}
+
+.header__topic span,
+.nav__topic span {
+    font-size: 0.8rem;
+    letter-spacing: 1.6px;
+    margin: 0 17px 0 18px;
+}
+
+.nav {
+    background:var(--creamcolor);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+}
+
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    width: 76px;
+    height: 76px;
+}
+
+.nav__btn {
+    /* display: block; */
+    width: 84px;
+    height: 78px;
+}
+
+.nav__list {
+   margin: 0 auto;
+}
+
+.contactaddress {
+    margin-top: 30px;
+   margin-bottom: 30px;
+   padding: 0 87.5px;
+}
+
+
+.instawaku__nav {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    /* padding: 16px 22px; */
+    margin-top: 20px;
+}
+
+.header__instalogo {
+    width: 30px; 
+    height: 30px;
+}
+
+.instagram__click__f {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    margin-left: 20px;
+}
+
+.phone__txt__f {
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.header__phone__logo {
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav__item {
+    color: var(--black);
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.75;
+    margin-top: 11px;
+}
+
+.header__btn {
+    display: block;
+    width: 84px;
+    height: 84px;
+    position: fixed;
+    top: 0%;
+    left: 81%;
+}
+
+.nav.active {
+    transform: translateX(0);
+} 
+
+
+/* header pc */
+@media screen and (min-width:769px) {
+    .header {
+        width: auto;
+        height: 104px;
+        /* margin: 0 auto; */
+    }
+
+
+    .header__topic {
+        width: 104px;
+        height: auto;
+        margin-left: 17px;
+        
+    }
+
+    .nav {
+        background-color: var(--white);
+        width: auto;
+        height: auto;
+        padding: 0;
+        position: static;
+        transform: translateX(0);
+        display: flex;
+        flex: 1;
+    }
+
+
+    .nav__btn {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+    /* .nav__header {
+        display: none;
+    } */
+
+    .nav__logo {
+        display: none;
+    }
+ 
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 63px;
+        margin: 0 auto;
+    }
+
+    .nav__item {
+        text-align: center;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 2.5;
+        letter-spacing: 0.51px;
+        /* border-bottom: #ff0000 solid; */
+    }
+
+    .nav__item:hover {
+         border-bottom:var(--red) solid;
+    }
+    
+    /* .nav__item:nth-child(even){
+        /* border-bottom: var(--italygreen) solid; */
+    
+
+    .nav__item:nth-child(even):hover {
+         border-bottom: green solid;
+    }
+
+    .contactaddress {
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0;
+        width: 186px;
+    }
+
+    
+    .t {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .instawaku__nav {
+        margin-top: 0;
+    }
+
+    .header__instalogo {
+        width: 20px; 
+        height: 20px;
+        /* margin-left: 30px;
+    } */}
+
+
+    /* .instagram__img {
+        min-width: 49px;
+    } */
+
+    .instagram__click__f {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.48px;
+        margin-left: 0;
+    }
+
+    .header__phone__logo{
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone__txt__f {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.64px;
+        margin-left: 15px;
+    }
+}
+
+/* ================== 
+main
+====================*/
+.a {
+    aspect-ratio: 375 / 444;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 37% center;
+    transform: scale(1.0);
+}
+
+.mainTopics {
+    /* background-image: url(../images/about-sp.jpg); */
+    /* background-size: cover; */
+    padding: 60px 7.4vw 27px 7.4vw;
+   
+}
+
+.header__maintopics {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 1.68px;
+}
+
+.mainTopics__title {
+    color: rgba(239, 237, 237, 0.65);
+    font-size: 8rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 2; 
+    letter-spacing: 3.982px;
+}
+
+.main__txt__chizu {
+    position: relative;
+}
+
+.main__txt__chizu::before {
+    content: '';
+    display: inline-block;
+    background: url(../images/about.png) no-repeat center / contain;
+    width: 266px;
+    height: 57px;
+    position: absolute;
+    z-index: -100;
+    top: 50px;
+    left: 55px;
+}
+
+.mainTopics__txt {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.4rem;
+    line-height: 2.3;
+    letter-spacing: 0.28px;
+    margin-top: 17px;
+    
+}
+
+.chizu__img {
+  
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.chizu {
+    max-width: 136px;
+    height: 178px;
+   
+  
+}
+
+
+.btndiv__f {
+    text-align: center;
+}
+
+
+
+.first__btn {
+    display: inline-block;
+    width: 230px;
+    height: 56px;
+    border-radius: 50px;
+    background:var(--italygreen);
+    padding: 11px 94px;
+    color: var(--white);
+    text-align: center;
+    font-family:"Fira Sans";
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    position: relative;
+    transition: 0.4s;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.first__btn:hover {
+    color: var(--white);
+    background-color: var(--italygreen);
+    opacity: 0.8;
+}
+
+.gallery__first {
+    padding: 34px 0 60px 0;
+    display: flex;
+}
+
+.scroll-infinity {
+    margin: 34px 0 60px;
+}
+
+@keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+ }
+    .scroll-infinity__wrap {
+      display: flex;
+      overflow: hidden;
+    }
+    .scroll-infinity__list {
+      display: flex;
+      list-style: none;
+      padding: 0
+    }
+    .scroll-infinity__list--left {
+      animation: infinity-scroll-left 20s infinite linear 0.5s both;
+    }
+    .scroll-infinity__item {
+        width: 270vw;
+        padding-left: 9px;
+       
+    }
+    /* .scroll-infinity__item>img {
+    } */
+
+
+    /* PC */
+    @media screen and (min-width:769px) {
+        .mainTopics {
+            /* background-image: url(../images/abput-pc.jpg); */
+            /* background-size: cover; */
+            padding: 85px 16vw 75px ;
+        }
+
+        .a {
+            aspect-ratio: 0 / 0;
+        } 
+
+        .video {
+            width: 100%;
+            object-fit: cover;
+            object-position: 30% center;
+            transform: scale(1.0);
+            aspect-ratio: 1000 / 500;
+        }
+
+
+        .main__txt__chizu {
+            display: flex;
+            position: relative;
+            max-width: 960px;
+        }
+
+        .main__txt__chizu::before {
+            width: 335px;
+            height: 72px;
+            top: 47%;
+            left: -14%;
+            transform: rotate(-90deg);
+        }
+        
+
+        .mainsection {
+            margin-left: 155px;
+        }
+
+        .header__maintopics {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 2.1;
+        }
+
+
+        .mainTopics__txt {
+            font-size: 1.7rem;
+            font-weight: 500;
+            line-height: 2.1;
+            max-width: 580px;
+            margin-top: 30px;
+        }
+
+        .chizu__img {
+            position: absolute;
+            top: -17%;
+            right:-62px ;
+
+        }
+
+        .chizu {
+            max-width: 273px;
+            height: 376px;
+        }
+
+        .btndiv__f {
+            margin-left: 155px;
+            text-align: unset;
+            margin-top: 30px;
+        } 
+
+        .scroll-infinity {
+            margin: 65px 0 85px;
+        }
+
+        .scroll-infinity__item {
+            width: 100vw;
+        }
+
+
+        .first__btn {
+            padding: 9px 94px;
+            font-size: 1.8rem;
+        }
+
+
+
+
+    }
+    
+
+/* ================== 
+pick up menu
+====================*/
+.pickupmenu {
+    background-color: var(--creamcolor);
+    padding: 60px 7.4vw;
+}
+
+.title__img {
+    width: 207px;
+    height: 53px;
+    margin: 0 auto;
+}
+
+.gosyoukai {
+    color: var(--black);
+    text-align: center;
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.32px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.gosyoukai::before {
+    content: "";
+    position: absolute;
+    top: 32%;
+    left: 9px;
+    width: 2px;
+    height: 1.5rem;
+    background-color: var(--red);
+    transform: rotate(-25deg);
+    border-radius: 5px;
+    
+}
+
+.gosyoukai::after {
+    content: "";
+    position: absolute;
+    top: 32%;
+    right: 10px;
+    width: 2px;
+    height: 1.5rem;
+    background-color: var(--red);
+    transform: rotate(25deg);
+    border-radius: 5px;
+    
+}
+
+
+
+
+
+.tomato__img {
+    width: 22%;
+    height: 70px; 
+    opacity: 0.4;
+    position: absolute;
+    top: -181px;
+    right: -26px;
+}
+
+.pickupmenu__selections {
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+.pickuset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.pickuset__dolce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    position: relative;
+}
+
+.set__p {
+    background-color: var(--white);
+    padding: 2.4rem;
+    text-align: center;
+    border: solid 0.3rem var(--red);
+    width: 100%;
+    /* margin-top: 38px; */
+    max-width: 292px;
+}
+
+.set__p__last {
+    background-color: var(--white);
+    padding: 2.4rem;
+    text-align: center;
+    border: solid 0.3rem var(--italygreen);
+    width: 100%;
+    /* margin-top: 38px; */
+    max-width: 292px;
+
+}
+
+.set__img {
+    object-fit: cover;
+    /* max-width: 144px; */
+    /* height: 144px; */
+    border-radius: 10px;
+}
+
+.title__frame {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    /* gap: 3px; */
+    margin-top: 30px;
+    align-items: baseline;
+}
+
+.pizzaillust__img {
+    width: 51px;
+}
+
+.pickupillust__pizza {
+    width: 60px;
+    /* height: 45px; */
+}
+
+.title__highlight {
+    color: var(--black);
+    /* text-align: center; */
+    font-family: "Fira Sans";
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    /* border-bottom: solid 3px black;
+    padding-bottom: 5px;
+    width: 88px; */
+    text-align: left;
+}
+
+/* .linepizza {
+    border-bottom: solid 2px var(--red);
+} */
+
+/* .linedolce {
+    border-bottom: solid 2px var(--italygreen);
+} */
+
+/* .linealcohol {
+    border-bottom: solid 2px var(--red);
+} */
+
+.pickupmenu__recommendation {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.87;
+    letter-spacing: 0.26px;
+    /* margin-top: 13px; */
+    text-align: center;
+}
+
+.dolceillust__img {
+    width: 37px;
+    transform: scale(-1,1);
+}
+
+.pickupillust__dolce {
+    width: 39px;
+    height: 34px;
+    margin-left: -18px;
+}
+
+.kinoko__img {
+    width: 26%;
+    height: auto;
+    position: absolute;
+    top:85%;
+    left:1px;
+
+}
+
+/* .kinoko {
+    width: 26%;
+    height: auto;
+} */
+
+.pickupmenu__title {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2;
+    /* margin-top: 10px; */
+    position: relative;
+    text-align: center;
+}
+
+.pickupmenu__maintxt {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.4rem;
+    line-height: 1.87;
+    letter-spacing: 0.28px;
+    margin-top: 16px;
+}
+
+.btndiv__second {
+    text-align: center;
+}
+
+.menu__btn {
+    display: inline-block;
+    width: 230px;
+    height: 56px;
+    border-radius: 50px;
+    background:var(--red);
+    padding: 11px 94px;
+    color: var(--white);
+    text-align: center;
+    font-family:"Fira Sans";
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    position: relative;
+    transition: 0.4s;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.menu__btn:hover {
+    background-color: var(--red);
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.menu__btn__alc  {
+    display: inline-block;
+    width: 230px;
+    height: 56px;
+    border-radius: 50px;
+    background:var(--italygreen);
+    padding: 11px 94px;
+    color: var(--white);
+    text-align: center;
+    font-family:"Fira Sans";
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    position: relative;
+    transition: 0.4s;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.menu__btn__alc:hover {
+    background-color: var(--italygreen);
+    color: var(--white);
+    opacity: 0.8;
+}
+
+
+.alcoholillust__img {
+   width: 23px;
+    transform: skew(0deg,-8deg);
+    
+}
+
+.pickupillust__alcohol {
+    width: 23px;
+    height: 38px;
+    margin-left: 7px;
+}
+
+
+@media screen and (min-width:769px) {
+    .pickupmenu {
+        padding: 85px 16.6vw ;
+    }
+
+    .pickuptitle {
+        text-align: center;
+    }
+
+    .title__img {
+        width: 375px;
+        height: 88px;
+    }
+
+    .gosyoukai {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 2.1;
+        display: inline-block;
+        letter-spacing: 0.6px;
+        margin-top: 50px;
+    }
+
+    .gosyoukai::before {
+        content: "";
+        position: absolute;
+        top: 36%;
+        left: -3%;
+        width: 3px;
+        height: 2.5rem;
+        background-color: var(--red);
+        transform: rotate(-25deg);
+        border-radius: 5px;
+        }
+
+    .gosyoukai::after {
+        content: "";
+        position: absolute;
+        top: 34%;
+        right: -2%;
+        width: 3px;
+        height: 2.5rem;
+        background-color: var(--red);
+        transform: rotate(25deg);
+        border-radius: 5px;
+    }
+    
+
+    .pickupmenu__selections {
+        display: flex;
+        gap: 70px;
+        max-width: 960px;
+        margin: 85px auto 45px;
+    }
+
+    .tomato__img {
+        width: 22%;
+        height: 205px;
+
+
+    }
+
+    .kinoko__img {
+        width: 41%;
+        height: auto;
+        position: absolute;
+        top: 57%;
+        left: -43%;
+    }
+
+    /* .kinoko {
+        width: 222px;
+        height: 224px;
+    } */
+
+    .pickuset{
+        display: flex;
+        /* gap: 74px; */
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .set__p {
+        max-width: 427px;
+        padding: 30px 47px;
+
+    }
+
+    .menu__btn {
+        padding: 9px 94px;
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    .menu__btn__alc {
+        padding: 9px 94px;
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    .set__p__last {
+        max-width: 427px;
+        padding: 30px 47px;
+
+    }
+
+    .title__frame {
+        display: flex;
+        gap: 2px;
+    }
+
+    .pickuset__dolce {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 74px;
+    }
+
+    .set__img {
+        object-fit: cover;
+        /* max-width: 420px;
+        height: 420px; */
+        border-radius: 10px;
+    }
+
+    .pickupmenu__txt {
+        width: 420px;
+        position: relative;
+        padding: 50px 35px;
+        margin: 0 auto;
+    }
+
+    /* .pickupmenu__txt::before {
+        content: "";
+        background-image:url(../images/kagi-frame-top.png);
+        display: block;
+        width: 85px;
+        height: 82px;
+        position: absolute;
+        left: -6px;
+        top: 35px;
+        background-size: cover;
+    } */
+
+    /* .pickupmenu__txt::after {
+        content: "";
+        background-image:url(../images/kagi-frame-bottom.png);
+        display: block;
+        width: 85px;
+        height: 82px;
+        position: absolute;
+        right: -6px;
+        bottom: 1px;
+        background-size: cover;
+
+    } */
+
+
+    .linepizza {
+        text-align: center;
+        font-size: 4.5rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 2;
+        letter-spacing: 2.6px;
+    }
+
+    .linedolce {
+        text-align: center;
+        font-size: 4.5rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 2;
+        letter-spacing: 2.6px;
+    }
+
+    .linealcohol {
+        text-align: center;
+        font-size: 4.5rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 2;
+        letter-spacing: 2.6px;
+    }
+
+    /* .pizzaillust__img {
+        /* position: relative;
+        top: -70px;
+        left: 141px; */
+    
+
+    .pickupillust__pizza {
+        max-width: 53px;
+        height: 60px;
+    }
+
+    .pickupillust__dolce {
+         max-width: 45px;
+        height: 48px;
+    }
+
+    .pickupillust__alcohol {
+        max-width: 31px;
+        height: 51px;
+    }
+
+    .pickupmenu__recommendation {
+        font-size: 2.4rem;
+        letter-spacing: 0.34px;
+        text-align: start;
+    }
+
+    .pickupmenu__title {
+        font-size: 2.8rem;
+        letter-spacing: 1.5px;
+        text-align: start;
+    }
+
+    .pickupmenu__maintxt {
+        /* max-width: 317px; */
+        height: 142px;
+        font-size: 1.8rem;
+        letter-spacing: 0.36px;
+    }
+
+    .btndiv__second {
+        text-align: start;
+    }
+}
+
+/* ================== 
+pick up menuの詳細
+====================*/
+.menuaddition {
+    padding: 30px  18px 0 30px;
+}
+
+.explanation {
+    color: var(--black);
+    text-align: center;
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.6rem;
+    line-height: 2.3;
+    letter-spacing: 0.32px;
+}
+
+.takeout {
+    color:var(--black);
+    text-align: center;
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.secound__btn {
+    display: inline-block;
+    width: 230px;
+    height: 56px;
+    border-radius: 50px;
+    background:var(--red);
+    padding: 11px 94px;
+    color: var(--white);
+    text-align: center;
+    font-family:"Fira Sans";
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.1;
+    position: relative;
+    transition: 0.4s;
+    margin-top: 20px;
+  
+}
+
+@media screen and (min-width:769px) {
+    .menuaddition {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 0 85px;
+    }
+
+    .explanation {
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 2.1;
+    }
+
+    .takeout {
+        margin-top: 0;
+        font-size: 1.7rem;
+        line-height: 2.1;
+    }
+}
+
+/* ================== 
+NEWS/CONTACTの詳細
+====================*/
+.news__contact {
+    padding: 60px 7.4vw 30px;
+}
+
+.news__title {
+    color: var(--black);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+}
+
+.news__title span {
+    /* position: relative;
+    display: inline-block; */
+    padding: 0 36px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.news__title span:before {
+    content: "";
+    display: inline-block;
+    background: url(../images/news-hataleft.png) no-repeat center / contain;
+    width: 18px;
+    height: 41px;
+    /* position: absolute;
+    top: 2px;
+    left: 9px; */
+}
+
+.news__title span::after {
+    content: "";
+    display: inline-block;
+    background: url(../images/news-hataright.png) no-repeat center / contain;
+    width: 18px;
+    height: 41px;
+    /* position: absolute;
+    top: 2px;
+    right: 9px; */
+}
+
+
+
+.flagset {
+    position: relative;
+}
+
+.flagleft {
+    position: absolute;
+    top:42px;
+    left: 84%;
+    max-width: 18px;
+    height: 41px;
+}
+
+.flagright {
+    max-width: 18px;
+    height: 41px;
+}
+
+.news__titleother {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.news__txt {
+    color: var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.6rem;
+    line-height: 2.3;
+    letter-spacing: 0.32px;
+    margin-top: 30px;
+}
+
+.news__txt span {
+    color: #333;
+    font-family: "Fira Sans";
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.3;
+    letter-spacing: 0.32px;
+}
+
+.instagragazou {
+    object-fit: cover;
+    max-width: 21px;
+    height: 21px;
+}
+
+.instagram__click {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 2.1;
+    margin-left: 20px;
+}
+
+.instawaku {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    padding: 16px 22px;
+    border: 1px solid var(--black);
+    margin-top: 20px;
+}
+
+@media screen and (min-width:769px) {
+    .news__contact {
+        padding: 85px 0 40px;
+    }
+
+    .news__corner {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+
+    .news__title {
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 1.5px;
+    }
+
+    /* .news__title span:before {
+        width: 45px;
+        height: 24px;
+        position: absolute;
+        top: 2px;
+        left: 9px;
+    } */
+
+    .news__txt {
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.7;
+        margin-top: 0;
+        
+    }
+
+    .news__txt span {
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 1.7;;
+    }
+
+    .news__titleother {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 77px;
+    }
+
+    .instawaku {
+        margin-top: 47px;
+    }
+}
+
+/* ================== 
+プロフィール
+====================*/
+
+.ownerprofile {
+    padding: 30px 7.4vw 60px;
+}
+
+.profilegray {
+    background-color: rgba(239, 237, 237, 0.70);;
+    display: flex;
+    max-width: 97%;
+    padding: 20px 6.4%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.92;
+    text-align: center;
+}
+
+.message::before {
+    content: "";
+    width: 2px;
+    height: 1.4rem;
+    background-color: var(--italygreen);
+    transform: rotate(-40deg);
+    border-radius: 5px;
+    transform-origin: center bottom;
+    display: block;
+}
+
+.message::after {
+    content: "";
+    width: 2px;
+    height: 1.4rem;
+    background-color: var(--red);
+    transform: rotate(40deg);
+    border-radius: 5px;
+    transform-origin: center bottom;
+    display: block;
+}
+
+.lolo__img {
+    width: 231px;
+    height: 231px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.profile__txtarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondtitle {
+        color:var(--black);
+    font-family: "Fira Sans";
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+}
+
+.name {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* margin-top: 16px; */
+}
+
+.meisyou {
+    color: var(--black);
+    text-align: center;
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.1;
+}
+
+.lolosan {
+    color: var(--black);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+.lolodetail {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.4rem;
+    line-height: 2.03;
+    letter-spacing: 0.28px;
+    margin-top: 20px;
+}
+
+
+@media screen and (min-width:769px) {
+    .ownerprofile {
+        padding: 20px 17.2vw 85px;
+    }
+
+    .profilegray {
+        padding: 44px 4.3vw 70px;
+        max-width: 944px;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .message {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.92;
+    }
+
+    .message::before {
+        content: "";
+        width: 3px;
+        height: 2.5rem;
+        background-color: var(--italygreen);
+        transform: rotate(-40deg);
+        border-radius: 5px;
+        transform-origin: center bottom;
+        display: block;
+    }
+
+    .message::after {
+        content: "";
+        width: 3px;
+        height: 2.5rem;
+        background-color: var(--red);
+        transform: rotate(40deg);
+        border-radius: 5px;
+        transform-origin: center bottom;
+        display: block;
+    }
+    
+
+    .lolo__img {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+
+
+    .profile__txtarea {
+        display: block;
+        max-width: 396px;
+        margin-left: 60px;
+    }
+
+    .meisyou {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.1;
+    }
+
+    .lolosan {
+        font-size: 2.4rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 1.5px;
+    }
+
+    .lolodetail {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.1;
+    }
+
+    }
+
+
+
+/* ================== 
+access/contact
+====================*/
+
+.map {
+    width: 100%;
+}
+
+.accesswhite {
+    background-color: var(--creamcolor);
+    padding: 30px 7.4vw;
+}
+
+.accessarea {
+    background-color: var(--white);
+    padding: 30px;
+}
+
+.access .secondtitle {
+    color:var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.5px;
+}
+
+.accesstxt {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.accessminutes {
+    color:var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 1.68px;
+    margin-top: 20px;
+}
+
+.accessdetail {
+    color: var(--black);
+    font-family: "Noto Sans CJK JP";
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 0.32px;
+}
+
+.last__btn {
+    display: inline-block;
+    width: 230px;
+    height: 56px;
+    border-radius: 50px;
+    background:var(--italygreen);
+    padding: 11px 81px;
+    color: var(--white);
+    text-align: center;
+    font-family:"Fira Sans";
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    position: relative;
+    transition: 0.4s;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.last__btn:hover {
+    background-color: var(--italygreen);
+    color: var(--white);
+    opacity: 0.8;
+}
+
+@media screen and (min-width:769px) {
+    .access {
+        background-color: var(--creamcolor);
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 85px 16.6vw;
+    }
+
+    /* .bbb {
+        max-width: 944px;
+    } */
+
+    .map {
+        width: 514px;
+        height: auto;
+    }
+
+    .accesswhite {
+        padding:0;
+    }
+
+    .accessarea {
+        padding: 40px 30px;
+    }
+
+    .secondtitle span {
+        font-size: 7rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.7;
+        letter-spacing: 2.8px;
+    }
+
+    .accessminutes {
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 1.5px;
+        margin-top: 30px;
+    }
+
+    .accessdetail {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.1;
+        /* margin-top: 20px; */
+    }
+
+    .btndiv__green {
+        margin-top: 18px;
+    }
+
+    .last__btn {
+        margin-top: 18px;
+        padding: 9px 67px;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* ================== 
+ギャラリーセカンド
+====================*/
+
+/* .scroll-infinity__last {
+    margin: 60px 0 60px;
+} */
+
+@keyframes infinity-scroll-left  {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+    }
+    .scroll-infinity__wrap {
+      display: flex;
+      overflow: hidden;
+    }
+    .scroll-infinity__list {
+      display: flex;
+      list-style: none;
+      padding: 0
+    }
+    .scroll-infinity__list--left {
+      animation: infinity-scroll-left 20s infinite linear 0.5s both;
+      
+    }
+    .scroll-infinity__item__last {
+        height: 306px;
+        aspect-ratio: 1024 / 390;
+    }
+    .scroll-infinity__item__last img {
+        height: 100%;
+    } 
+
+
+
+    @media screen and (min-width:769px) {
+        /* .scroll-infinity__last {
+            margin: 85px 0 85px;
+        } */
+
+        .scroll-infinity__item__last {
+            height: 453px;
+        }
+
+    }
+
+/* ================== 
+フッター
+====================*/
+.footer {
+    padding: 40px 0;
+    background-color: var(--creamcolor);
+    text-align: center;
+}
+
+.footer__group {
+    text-align: center;
+}
+
+.footer__logo {
+    max-width: 135px;
+    height: 135px;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu__item {
+    color: var(--black);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.contactaddress__last {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 23.3%;
+}
+
+.instawaku__footer {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: -15px;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+}
+
+.instagram__img {
+    min-width: 60px;
+    margin: 0;
+}
+
+.instagram a {
+    display: block;
+    text-align: left;
+    flex: 1;
+}
+
+.instagram__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.instagram__txt {
+    width: 100%;
+    text-align: left;
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.phone__img a {
+    display: block;
+    width: 60px;
+    text-align: left;
+}
+
+.phone__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.phone__txt {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    /* width: 100%; */
+}
+
+.copy {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-top: 29px;
+}
+
+.copy__small {
+    font-size: 80%;
+}
+
+
+@media screen and (min-width:769px) {
+    .footer {
+        padding: 0;
+    }
+
+    .footer__group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__topic {
+        padding: 17px;
+    }
+
+    .footer__logo {
+        max-width: 104px;
+        height: 104px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        gap: 63px;
+        width: 772px;
+    }
+
+    .menu__item {
+        text-align: center;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.51px;
+        border-bottom: #ff0000 solid;
+    }
+
+    .menu__item:nth-child(even){
+        border-bottom: green solid;
+    }
+    
+
+    .contactaddress__last {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-right: 50px;
+        width: 292px;
+    }
+
+    .instawaku__footer {
+        width: 0;
+    }
+
+    .instagram__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone {
+        margin-top: 6px;
+    }
+
+    .phone__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone__img {
+        margin-right: -23px;
+    }
+
+    .phone__txt {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.6px;
+        width: auto;
+    }
+
+    .contactaddress__last,
+    .copylight {
+    text-align: center;   /* 中央寄せにしたい場合 */
+    }
+
+    .contactaddress__last {
+    margin-bottom: 15px;  /* インスタ・電話とコピーライトの間に余白 */
+    }
+
+}
