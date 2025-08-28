@@ -1,0 +1,2129 @@
+@charset "utf-8";
+/* ================== 
+comon
+====================*/
+:root {
+    --white: #FFF;
+    --italygreen:#009246;
+    --creamcolor:#FDF7F1;
+    --red:#CE2B37;
+    --black:#333333;
+    --contentWidth: 91.4%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:
+        'noto sans cjk jp',
+        'noto sans jp',
+        'Fira Sans',
+        sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--black, #333333);
+    background-color: var(--white, #FFF);
+    line-height: 1.5;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .forPC{display: none!important;}
+  }
+  @media screen and (min-width:769px) {
+    .forSP{display: none!important;}
+}
+
+.btndiv {
+    text-align: center;
+} 
+
+/* common PC */
+
+/* @media screen and (min-width:769px) {
+    .btndiv {
+        margin-left: 155px;
+    }
+} */
+
+
+
+/* ====================
+header
+======================= */
+.header {
+    background-color: var(--white);
+    /* padding: 0 0 0 4.2%; */
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 76px;
+    height: 76px;
+}
+
+.header__topic a,
+.nav__topic a {
+    display: flex;
+    align-items: center;
+}
+
+.header__topic span,
+.nav__topic span {
+    font-size: 0.8rem;
+    letter-spacing: 1.6px;
+    margin: 0 17px 0 18px;
+}
+
+.nav {
+    background:var(--creamcolor);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+}
+
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    width: 76px;
+    height: 76px;
+}
+
+.nav__btn {
+    /* display: block; */
+    width: 84px;
+    height: 78px;
+}
+
+.nav__list {
+    margin: 0 auto;
+}
+
+.contactaddress {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 87.5px;
+}
+
+
+.instawaku__nav {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    /* padding: 16px 22px; */
+    margin-top: 20px;
+}
+
+.header__instalogo {
+    width: 30px; 
+    height: 30px;
+}
+
+.instagram__click__f {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    margin-left: 20px;
+}
+
+.phone__txt__f {
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.header__phone__logo {
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav__item {
+    color: var(--black);
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.75;
+    margin-top: 11px;
+}
+
+.header__btn {
+    display: block;
+    width: 84px;
+    height: 84px;
+    position: fixed;
+    top: 0%;
+    left: 81%;
+}
+
+.nav.active {
+    transform: translateX(0);
+} 
+
+
+/* header pc */
+@media screen and (min-width:769px) {
+    .header {
+        width: auto;
+        height: 104px;
+        /* margin: 0 auto; */
+    }
+
+
+    .header__topic {
+        width: 104px;
+        height: auto;
+        margin-left: 17px;
+        
+    }
+
+    .nav {
+        background-color: var(--white);
+        width: auto;
+        height: auto;
+        padding: 0;
+        position: static;
+        transform: translateX(0);
+        display: flex;
+        flex: 1;
+    }
+
+
+    .nav__btn {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+    /* .nav__header {
+        display: none;
+    } */
+
+    .nav__logo {
+        display: none;
+    }
+ 
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 63px;
+        margin: 0 auto;
+    }
+
+    .nav__item {
+        text-align: center;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.51px;
+      
+    }
+
+    .nav__item:hover {
+       border-bottom:var(--red) solid;
+    }
+
+    /* .nav__item:nth-child(even){
+        border-bottom: green solid;
+    } */
+    
+    .nav__item:nth-child(even):hover{
+        border-bottom: green solid;
+    }
+
+    .contactaddress {
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    
+    .t {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .instawaku__nav {
+        margin-top: 0;
+    }
+
+    .header__instalogo {
+        width: 20px; 
+        height: 20px;
+    }
+
+    .instagram__click__f {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.48px;
+        margin-left: 0;
+    }
+
+    .header__phone__logo{
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone__txt__f {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.64px;
+        margin-left: 15px;
+    }
+}
+/* chatGPTによるCSS
+* ================== 
+セクション全体
+====================*/
+.select {
+  background-color: var(--creamcolor);
+  padding: 60px 7.4vw;
+  text-align: center;
+}
+
+/* ===== 見出し（DRINK） ===== */
+.kasoutitle {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+
+/* ===== カテゴリーボタン ===== */
+.drink__category {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--black);
+}
+
+.select__alcohol,
+.select__softdrink,
+.select__coffee__tea  {
+  display: inline-block;
+  padding: 3px 15px;
+  border-radius: 24px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Fira Sans', sans-serif;
+  color: #fff;
+}
+
+/* ボタンの個別カラー設定 */
+
+.select__alcohol{
+  background-color: var(--italygreen); /* アルコール: 緑 */
+}
+
+.select__alcohol:hover {
+  background-color: var(--italygreen);
+  color: var(--white);
+  opacity: 0.8;
+}
+
+.select__softdrink {
+  background-color: #C4C4C4; /* SOFT DRINK: グレー */
+}
+
+.select__softdrink:hover {
+  background-color: #C4C4C4 ;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.select__coffee__tea {
+  background-color: var(--red); /* OTHERS: 赤 */
+}
+
+.select__coffee__tea:hover {
+   background-color: var(--red) ;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+
+.select__drink:hover {
+  filter: brightness(0.9);
+}
+
+/* ===== PDFリンク ===== */
+.pdf {
+  margin-bottom: 24px;
+}
+
+.pdfbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 42px;
+  padding: 12px 71px;
+  font-size: 1.4rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  color:var(--black);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+}
+
+.pdfbtn:hover {
+  background-color: var(--italygreen);
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.arrow {
+  position: absolute;
+  right: 18px;
+}
+
+
+/* .pdfbtn:hover {
+  background-color: #333;
+  color: #fff;
+} */
+
+.pdfbtn img {
+  vertical-align: middle;
+}
+
+.pdfbtn img:first-child {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.pdfbtn img:last-child {
+  margin-left: 8px;
+  width: 12px;
+  height: 12px;
+}
+
+/* ===== 注意書きテキスト ===== */
+.setumei {
+  font-size: 1.4rem;
+  color: var(--black);
+  line-height: 26.18px;
+  margin-top: 30px;
+  letter-spacing: 0.28px;
+}
+
+/* ==================  */
+ /* ドリンクセクション全体 */
+/* ================== */
+/* PCver */
+@media screen and (min-width:769px) {
+  .spbr {
+    display: none;
+  }
+
+  .select {
+    padding: 85px 16.6vw;
+  }
+
+  .kasoutitle {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 2.80px;
+  }
+
+  .drink__category {
+    width: 490px;
+    margin: 0 auto;
+    gap: 18px;
+  }
+
+  .pdf {
+    margin-top: 30px;
+  }
+
+  .select__alcohol,
+  .select__softdrink,
+  .select__coffee__tea {
+    padding: 3px 35px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 33.48px;
+    letter-spacing: 0.90px;
+  }
+
+  .pdfbtn {
+    font-size: 1.6rem;
+  }
+
+  .setumei {
+    font-size: 1.7rem;
+    line-height: 31.79px;
+    letter-spacing: 0.34px;
+    margin-top: 15px;
+  }
+
+  }
+  
+
+/* ==================  */
+/* アルコールコーナー  */
+/* ================== */
+.pcbr {
+  display: none;
+}
+
+.menu__noothers {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.white {
+  padding: 60px 7.4vw;
+}
+
+.pc__alcohol {
+  display: none;
+}
+
+
+.drink__ribon {
+  width: 209px;
+  /* height: 32px; */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.alcohol__icon {
+  display: none;
+}
+
+.alcohol__corner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* リボン画像 */
+.ribon {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.alcohol__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 36px;
+  height: 36px;
+}
+
+/* フレーバー選択ボタン */
+.flavor__select {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.secondlink__beer,
+.secondlink__wine,
+.secondlink__liqueur,
+.secondlink__others{
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  padding-left: 24px;
+  line-height: 26.04px;
+  letter-spacing: 0.28px;
+  font-family: 'Fira Sans';
+  font-style: italic;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ビールの擬似要素 */
+.secondlink__beer a::before,
+.secondlink__beer a::after,
+/* ワインの擬似要素 */
+.secondlink__wine a::before,
+.secondlink__wine a::after,
+/* リキュールの擬似要素 */
+.secondlink__liqueur a::before,
+.secondlink__liqueur a::after,
+/* アザースの擬似要素 */
+.secondlink__others a::before,
+.secondlink__others a::after {
+  position: absolute;
+  content: '';
+}
+
+/* ビールビフォー */
+.secondlink__beer a::before {
+  top: .35em;
+  left: 0em;
+  width: 14px;
+  height: 14px;
+  background-color:var(--red);
+  border-radius: 100%;
+}
+
+/* ビールアフター */
+.secondlink__beer a::after {
+  top: 0.6em;
+  left: 0.3em;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* ワインビフォー */
+.secondlink__wine a::before {
+  top: .35em;
+  left: 0em;
+  width: 14px;
+  height: 14px;
+  background-color:var(--italygreen);
+  border-radius: 100%;
+}
+
+/* ワインアフター */
+.secondlink__wine a::after {
+  top: 0.6em;
+  left: 0.3em;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* リキュールビフォー */
+.secondlink__liqueur a::before {
+  top: .35em;
+  left: 0em;
+  width: 14px;
+  height: 14px;
+  background-color:#C4C4C4;
+  border-radius: 100%;
+}
+
+/* リキュールアフター */
+.secondlink__liqueur a::after {
+  top: 0.6em;
+  left: 0.3em;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* アザースビフォー */
+.secondlink__others a::before {
+  top: .35em;
+  left: 0em;
+  width: 14px;
+  height: 14px;
+  background-color:var(--red);
+  border-radius: 100%;
+}
+
+/* アザーズアフター */
+.secondlink__others a::after {
+  top: 0.6em;
+  left: 0.3em;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* ===== 各カテゴリの色設定 ===== */
+.flavor__wine::before {
+  background-color: var(--italygreen); /* ワイン */
+}
+
+.flavor__beer::before {
+  background-color: var(--red); /* ビール */
+}
+
+.flavor__liqueur::before {
+  background-color: #A874B4; /* リキュール（紫系など自由に変更可） */
+}
+
+.flavor__others::before {
+  background-color: #C4C4C4; /* その他 */
+}
+
+.secondlink a:hover {
+  opacity: 0.85;
+}
+
+/* * ==================  */ 
+ /* アルコールコーナー  */
+/* ================== */
+/* PC VER */
+@media screen and (min-width:769px) {
+  .menu__alcohol {
+    padding: 85px 16.6vw;
+    gap: 70px;
+  }
+
+  .white {
+    padding: 0;
+    /* display: flex;
+    flex-direction: column;
+    gap: 50px; */
+  }
+
+  .pc__alcohol {
+      display: block;
+      font-size: 3rem;
+      font-family: Fira Sans;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 1.80px;
+      width: 229px;
+      padding: 5px 45px;
+      background-color:var(--italygreen);
+      border-radius: 5px;
+      color: var(--white);
+      position: relative;
+      margin: 0 auto;
+      text-align: center;;
+  }
+
+
+  .alcohol__icon {
+    display: block;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-45%, -54%);
+    width: 22px;
+    height: 35px;
+  }
+
+  .ribon {
+    display: none;
+  }
+
+  }
+
+
+
+
+
+/* ==================  */
+/* アルコール - ビール */
+/* ================== */
+.beer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+/* 各セクション見出し */
+.drinkmenu__title {
+  background-image: url(../image-drink/sp__beer.svg);
+  background-repeat: no-repeat;
+  background-size: 9rem;
+  padding-bottom: 1rem;
+  text-indent:100%;
+  overflow: hidden;
+  height: 7.5rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.drinkmenu__title__wine {
+  background-image: url(../image-drink/sp__wine.svg);
+  background-repeat: no-repeat;
+  background-size: 9rem;
+  padding-bottom: 1rem;
+  text-indent:100%;
+  overflow: hidden;
+  height: 7.5rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.drinkmenu__title__liqueur {
+  background-image: url(../image-drink/sp__liqueur.svg);
+  background-repeat: no-repeat;
+  background-size:11rem;
+  padding-bottom: 1rem;
+  text-indent:100%;
+  overflow: hidden;
+  height: 7.5rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.drinkmenu__title__others {
+  background-image: url(../image-drink/sp__others.svg);
+  background-repeat: no-repeat;
+  background-size: 11rem;
+  padding-bottom: 1rem;
+  text-indent:100%;
+  overflow: hidden;
+  height: 7.5rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.italiabeer {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 37.80px;
+
+}
+
+/* 写真付きのビールアイテム */
+.list__beer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.photoset {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.morepero {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.drink__sample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+
+.menu__img {
+  width: 257px;
+  /* height: 257px; */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.caption {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.caption__title {
+  font-size: 2.4rem;
+  font-family: Fira Sans;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 44.64px;
+  letter-spacing: 0.48px;
+}
+
+.midashi {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: var(--black);
+  font-family: Noto Sans CJK JP;
+  font-weight: 500;
+  line-height: 37.80px;
+}
+
+.product__name {
+  font-size: 1.4rem;
+  font-family: Noto Sans CJK JP;
+  font-weight: 350;
+  line-height: 26.32px;
+}
+
+.main__taxt {
+  font-size: 1.4rem;
+  font-family: Noto Sans CJK JP;
+  line-height: 26.32px;
+  margin-top: 15px;
+}
+
+.caption__title__jp {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Noto Sans CJK JP;
+  line-height: 42px;
+}
+
+/* 画像なしメニュー */
+.list__beer  .litle__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 319px;
+  padding-bottom: 16px;
+}
+
+.nono .drink__sample {
+  display: flex;
+  
+}
+
+
+.litle__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.60);
+  padding-bottom: 16px;
+
+}
+
+.mini__title__jp {
+  font-size: 1.4rem;
+  font-family: Noto Sans CJK JP;
+  font-weight: 500;
+  line-height: 26.04px;
+  letter-spacing: 0.28px;
+}
+
+/* .others {
+  background-color: var(--creamcolor);
+  padding: 60px 7.4vw;
+} */
+
+/* ==================  */
+ /* ビールコーナー  */
+/* ================== */
+/* PC VER */
+  @media screen and (min-width:769px) {
+    .pcbr {
+      display: block;
+    }
+
+
+    .flavor__select {
+      gap: 50px;
+      margin-top: 54px;
+    } 
+
+    .secondlink__beer,
+    .secondlink__wine,
+    .secondlink__liqueur,
+    .secondlink__others {
+      position: relative;
+      display: inline-block;
+      font-size: 2rem;
+      padding-left: 24px; 
+      line-height: 37.20px;
+      letter-spacing: 0.4px;
+    }
+    
+    .secondlink__beer a::before {
+      top: 0.55em;
+      left: 0em;
+      width: 18px;
+      height: 18px;
+    }
+
+    .secondlink__beer a::after {
+      top: 0.8em;
+      left: 0.3em;
+    }
+
+    .secondlink__wine a::before {
+      top: 0.55em;
+      left: 0em;
+      width: 18px;
+      height: 18px;
+    }
+
+    .secondlink__wine a::after {
+      top: 0.8em;
+      left: 0.3em;
+    }
+
+    .secondlink__liqueur a::before {
+      top: 0.55em;
+      left: 0em;
+      width: 18px;
+      height: 18px;
+    }
+
+    .secondlink__liqueur a::after {
+      top: 0.8em;
+      left: 0.3em;
+    }
+
+    .secondlink__others a::before {
+      top: 0.55em;
+      left: 0em;
+      width: 18px;
+      height: 18px;
+    }
+
+    .secondlink__others a::after {
+      top: 0.8em;
+      left: 0.3em;
+    }
+
+    /* ビールあしらい */
+    .drinkmenu__title {
+      background-size:11rem;
+      margin: 85px 30px 0;
+    }
+
+    /* ワインあしらい */
+    .drinkmenu__title__wine {
+      background-size: 11rem;
+      margin: 85px 30px 0;
+    }
+
+    /* リキュールあしらい */
+    .drinkmenu__title__liqueur {
+      background-size: 11rem;
+      margin: 85px 30px 0;
+    }
+
+    /* アザーズあしらい */
+    .drinkmenu__title__others {
+      background-size: 11rem;
+      margin: 85px 30px 0;
+    }
+
+    /* ビールのコーナーPC */
+    .beer {
+      gap: 0;
+    }
+
+    .photoset {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      gap: 70px;
+      margin-top: 30px;
+    }
+
+    .list__beer {
+      align-items: center;
+    }
+
+
+    /* 最初のアイテム（上段）のスタイル */
+    .list__beer li:first-child  {
+      width: 336px;
+      align-items: center; 
+      gap: 30px; 
+    }
+
+    /* 1 段目の写真の大きさ */
+    .list__beer li:first-child .menu__img {
+      width: 300px; /* 画像の幅を調整 */
+      height: auto;
+      margin-bottom: 0; /* 下余白をリセット */
+    }
+
+    .list__beer li:nth-child(n+2) {
+      width: 336px;
+      flex-direction: column; 
+    }
+
+    /* 2 段目の写真の大きさ */
+    .list__beer li:nth-child(n+2) .menu__img {
+      width: 300px; /* 画像の幅を調整 */
+      height: auto;
+      margin-bottom: 0; /* 下余白をリセット */
+    }
+
+    .morepero {
+      display: flex;
+      flex-direction: row;
+      gap: 121px;
+    }
+
+    .caption {
+      max-width: 336px;
+    }
+
+    .italiabeer {
+      font-size: 1.8rem;
+      line-height: 37.80px;
+    }
+
+    .midashi {
+       align-items: center;
+    }
+
+    .product__name {
+      font-size: 1.8rem;
+      line-height: 33.66px;
+      letter-spacing: 0.36px;
+    }
+
+    .main__taxt {
+      font-size: 1.6rem;
+      line-height: 30.08px;
+    }
+
+    .nono {
+      padding: 15px 1.4vw;
+      background-color: rgba(230, 227, 227, 0.3);
+      border: 1px solid #C4C4C4;
+    }
+
+    .mini__title__jp {
+      font-size: 2.2rem;
+      line-height: 46.20px;
+
+    }
+
+    .list__beer .litle__caption {
+      width: 326px;
+      padding-bottom: 16px;
+    }
+
+
+    .litle__caption  {
+      gap: 195px;
+    }
+
+    
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+  }
+
+
+
+/* ==================  */
+/* アルコール - ワイン */
+/* ================== */
+
+/* 写真付きリストの全体ラッパー */
+.withimg {
+  margin-bottom: 32px;
+}
+
+.list__wine {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.wine .noimg {
+  display: flex;
+  flex-direction: column;
+ /* margin-top: 54px; */
+}
+
+/* 写真がないワインリスト（ul） */
+.noimg {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.boxa {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.boxb {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 写真なしリストの各項目 */
+.alcohol__txt__sample {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  /* margin-bottom: 24px; 各商品間の余白 */
+  border-bottom: 1px solid rgba(51, 51, 51, 0.60);
+  
+}
+
+/* 名前と価格（横並び） */
+.litle__captiona {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.wine .litle__captionb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.litle__captionc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 16px;
+
+}
+
+.mini__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color:var(--black);
+  line-height: 29.76px;
+  letter-spacing: 0.32px;
+}
+
+
+/* bottle情報（2段構成） */
+.bottles {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  align-items: center;
+  padding-left: 4px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--black);
+  padding-bottom: 16px;
+}
+
+.span {
+  font-size: 1.3rem;
+}
+
+.bottle__price {
+  display: flex;
+  gap: 38px;
+  align-items: center;
+}
+
+/* ワイン名（ボトル）行を2段にした場合の微調整 */
+.second__minititle {
+  margin-right: 8px;
+}
+
+
+/* ==================  */
+/* アルコール - ワイン */
+/* ================== */
+/* PCVER */
+@media screen and (min-width:769px) {
+  .wine {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .list__wine {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 121px;
+  }
+
+  .wine .noimg {
+    margin: 0;
+    background-color: rgba(230, 227, 227, 0.3);
+    width: 869px;
+    border: 1px solid #C4C4C4;
+    margin: 0 auto;
+    gap: 0;
+  }
+
+  .alcohol__txt__sample {
+    border-bottom: 1px solid var(--black);
+    width: 246px;
+  }
+
+  .boxa {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 3.9vw 0;
+    gap: 94px;
+    justify-content: space-around;
+  }
+
+  .boxb {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 3.9vw 0;
+    gap: 94px;
+    width: 869px;
+    justify-content: space-around;
+   
+  } 
+
+  .boxc {
+    display: flex;
+    padding: 30px 6.5vw;
+    gap: 94px;
+    width: 869px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .mini__title {
+    font-size: 2.2rem;
+    line-height: 40.92px;
+    letter-spacing: 0.44px;
+  }
+
+  /* .litle__captiona,
+  .litle__captionb,
+  .litle__captionc{
+    width: 319px;
+  } */
+
+  .second__minititle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 37.80px;
+  }
+
+  .bottles {
+    gap: 24px;
+  }
+
+  .bottle__price {
+    gap: 19px;
+  }
+
+  .span {
+    font-size: 1.6rem;
+  }
+
+
+
+
+  
+
+
+
+
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+/* ==================  */
+/* アルコール - リキュール */
+/* ================== */
+
+/* 写真付きアイテム（ul.withimg > li） */
+/* .drink__sample {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+} */
+
+/* .liqueur .menu__img {
+  flex-shrink: 0;
+  width: 100px;
+  height: auto;
+} */
+
+/* テキスト部分（説明など） */
+.caption {
+  flex: 1;
+}
+
+/* .midashi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+} */
+
+/* .caption__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+} */
+
+/* .main__taxt {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+} */
+
+/* 写真なしリスト（ul.noimg > li） */
+.drinkmenu__title__liqueur .noimg {
+  margin-top: 16px;
+}
+
+/* .alcohol__txt__sample {
+  margin-bottom: 16px;
+} */
+
+/* .litle__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+} */
+
+.noimg__liqueur {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ==================  */
+/* アルコール - リキュール */
+/* ================== */
+ @media screen and (min-width:769px) {
+  .flex {
+    display: flex;
+    gap: 121px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .noimg__liqueur {
+   padding: 30px 3.9vw;
+   background-color: rgba(230, 227, 227, 0.3);
+    /* max-width: 403px; */
+    border: 1px solid #C4C4C4;
+    gap: 30px;
+  }
+
+  .noimg__liqueur .alcohol__txt__sample {
+    width: 319px;
+  }
+
+  .noimg__liqueur .litle__caption {
+    gap: 76px;
+    padding-bottom: 16px;
+  }
+
+ }
+
+
+  
+
+/* ==================  */
+/* アルコール - アザース */
+/* ================== */
+
+/* 写真付きリストの共通スタイル */
+/* .withimg {
+  /* margin-bottom: 24px; */
+  /* display: flex;
+  flex-direction: column;
+  gap: 54px; */
+
+ */
+
+.list__others {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* .drink__sample {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+} */
+
+
+.caption {
+  flex: 1;
+}
+
+
+/* .caption__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+} */
+
+/* .main__taxt {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+} */
+
+/* .alcohol__txt__sample {
+  margin-bottom: 16px;
+} */
+
+.noimg__others {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ==================  */
+/* アルコール - アザーズ */
+/* ================== */
+ @media screen and (min-width:769px) {
+  .noimg__others{
+    padding: 30px 3.9vw;
+    background-color: rgba(230, 227, 227, 0.3);
+    border: 1px solid #C4C4C4;
+    gap: 30px;
+  }
+
+  .noimg__others .litle__caption {
+    gap: 26px;
+    padding-bottom: 16px;
+  }
+ }
+
+
+
+
+/* ==================  */
+/* ソフトドリンク*/
+/* ================== */
+/* ---------- SOFTDRINKセクション ---------- */
+/* DOLCE全体 */
+.menu__softdrink {
+  background-color: var(--creamcolor);
+  padding: 60px 7.4vw;
+}
+
+.pc__softdrink {
+  display: none;
+}
+
+
+.softdrink__icon {
+  /* width: 50px; 
+  height: auto; */
+  display: none;
+}
+
+/* ティラミスのレイアウト */
+.list__softdrink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 54px;
+}
+
+.noimg__softdrink {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box__jinor {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+
+
+
+.list__softdrink .drink__sample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+
+/* 画像なしメニューリスト */
+/* .noimg {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+} */
+
+.menu__softdrink .noimg {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 320px;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.litle__caption__dc__ot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.60);
+  padding-bottom: 16px;
+}
+
+
+/* ==================  */
+/* ソフトドリンク*/
+/* ================== */
+/* pcVER */
+@media screen and (min-width:769px) {
+  .menu__softdrink {
+    padding: 85px 16.6vw;
+  }
+
+  .pc__softdrink {
+    display: block;
+    font-size: 3rem;
+    font-family: Fira Sans;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1.80px;
+    width: 268px;
+    padding: 5px 45px;
+    background-color:#C4C4C4;
+    color: var(--white);
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .softdrink__icon {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: auto;
+    top: 40%;
+    left: 92%;
+    transform: translate(-78%, -54%);
+    
+  }
+
+
+
+  .list__softdrink {
+    flex-direction: row;
+    justify-content: center;
+    gap: 170px;
+    margin-top: 60px;
+  }
+
+  .box__american .litle__caption__dc__ot {
+    justify-content: flex-start;
+    gap: 60px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.60);
+    width: 343px;
+  }
+
+  .litle__caption__dc__ot {
+   width: 356px;
+    gap: 42px;
+    padding-bottom: 16px;
+  }
+
+  .noimg__softdrink {
+    width: 942px;
+    display: flex;
+    flex-direction:row;
+    padding: 30px 3.9vw;
+    background-color: rgba(230, 227, 227, 0.3);
+    border: 1px solid #C4C4C4;
+    gap: 95px;
+    margin: 0 auto;
+    justify-content: center;
+
+  }
+  
+  .box__jinor {
+    display: flex;
+    gap: 30px;
+  }
+
+  .box__nonbeer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+}
+
+
+
+/* ==================  */
+/* コーヒーと紅茶*/
+/* ================== */
+.menu__cafe {
+  padding: 60px 7.4vw;
+
+}
+
+.pc__cafe  {
+  display: none;
+}
+
+
+.cafe__icon {
+  display: none;
+}
+
+
+
+.list__cafe  {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.box__es__cap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box__mo__tea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ==================  */
+/* コーヒーと紅茶*/
+/* ================== */
+/* PCVER */
+ @media screen and (min-width:769px) {
+  .menu__cafe {
+    padding: 85px 16.6vw;
+  }
+
+  .pc__cafe {
+    display: block;
+    font-size: 3rem;
+    font-family: Fira Sans;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1.80px;
+    width: 309px;
+    padding: 5px 45px;
+    background-color:var(--red);
+    color: var(--white);
+    border-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+    /* text-align: center; */
+    /* margin-bottom: 50px; */
+  }
+
+  .cafe__icon {
+    display: block;
+    position: absolute;
+    width: 46px;
+    height: auto;
+    top: 48%;
+    left: 87%;
+    transform: translate(-52%, -52%);
+  }
+
+  .list__cafe {
+    width: 869px;
+    display: flex;
+    background-color: rgba(230, 227, 227, 0.3);
+    border: 1px solid #C4C4C4;
+    gap: 0;
+    margin-top: 54px;
+  }
+
+  .box__es__cap {
+    display: flex;
+    padding: 30px 3.9vw 0;
+    flex-direction: row;
+    gap: 94px;
+  }
+
+  .box__mo__tea {
+    display: flex;
+    padding: 30px  3.9vw ;
+    flex-direction: row;
+    gap: 94px;
+  }
+
+  .box__american {
+    padding:0 3.9vw 30px;
+    
+  }
+
+
+
+ }
+
+/* ==================  */
+ /* ドリンクボタンセクション */
+/* ================== */
+.foodpagehe {
+  background-color: var(--creamcolor);
+  padding: 60px 7.4vw;
+  text-align: center;
+}
+
+.food__btn {
+  display: inline-block;
+  width: 230px;
+  height: 56px;
+  border-radius: 50px;
+  background:var(--red);
+  padding: 11px 94px;
+  color: var(--white);
+  text-align: center;
+  font-family:"Fira Sans";
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 2.1;
+  position: relative;
+  transition: 0.4s;
+  margin-top: 20px;
+  letter-spacing: 0.8px;
+}
+
+.food__btn:hover {
+  background-color: var(--red);
+  color: var(--white);
+  opacity: 0.8;
+}
+
+
+/* * ==================  */ 
+ /* ドリンク誘導セクション*/
+/* ================== */
+/* PCVER */
+@media screen and (min-width:769px) {
+  .drinkpagehe {
+    padding: 85px 16.6vw;
+  }
+
+  .food__btn {
+    margin-top: 0;
+    padding: 9px 94px;
+    font-size: 1.8rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* ==================  */
+ /* フッター*/
+/* ================== */
+.footer {
+    padding: 40px 0;
+    background-color: var(--creamcolor);
+    text-align: center;
+}
+
+.footer__group {
+    text-align: center;
+}
+
+.footer__logo {
+    max-width: 135px;
+    height: 135px;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu__item {
+    color: var(--black);
+    text-align: center;
+    font-family: "Fira Sans";
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.contactaddress__last {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 87.5px;
+}
+
+.instawaku__footer {
+    width: 196px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: -15px;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+}
+
+.instagram__img {
+    min-width: 60px;
+    margin: 0;
+}
+
+.instagram a {
+    display: block;
+    text-align: left;
+    flex: 1;
+}
+
+.instagram__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.instagram__txt {
+    width: 100%;
+    text-align: left;
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.phone__img a {
+    display: block;
+    width: 60px;
+    text-align: left;
+}
+
+.phone__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.phone__txt {
+    color: var(--black);
+    font-family: "Fira Sans";
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.1;
+    width: 100%;
+}
+
+.copy {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-top: 29px;
+}
+
+.copy__small {
+    font-size: 80%;
+}
+
+/* ==================  */
+/* フッター*/
+/* ================== */
+/* PCVER */
+@media screen and (min-width:769px) {
+    .footer {
+        padding: 0;
+    }
+
+    .footer__group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__topic {
+        padding: 17px;
+    }
+
+    .footer__logo {
+        max-width: 104px;
+        height: 104px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        gap: 63px;
+    }
+
+    .menu__item {
+        text-align: center;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.51px;
+        border-bottom: #ff0000 solid;
+    }
+
+    .menu__item:nth-child(even){
+        border-bottom: green solid;
+    }
+    
+
+    .contactaddress__last {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-right: 50px;
+    }
+
+    .instawaku__footer {
+        width: 0;
+    }
+
+    .instagram__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone {
+        margin-top: 6px;
+    }
+
+    .phone__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .phone__img {
+        margin-right: -23px;
+    }
+
+    .phone__txt {
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.75;
+        letter-spacing: 0.6px;
+        width: auto;
+    }
+}
+
+
+
