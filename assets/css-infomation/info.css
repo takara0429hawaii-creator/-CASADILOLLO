@@ -516,11 +516,19 @@ css記述　ジェンみさん
 }
 
 
-.times, .last__times {
+.times {
     display: flex;
-    align-items: baseline; /* ベースラインで揃える */
-    gap: 25px; /* 要素間のスペース */
+    /* align-items: baseline;  */
+    /* gap: 25px;  */
+    flex-direction: column;
+    gap:7px;
 }
+
+.times .timefull {
+  display: flex;
+  gap: 12px;
+}
+
 
 .cash {
     font-size: 1.4rem;
@@ -859,7 +867,7 @@ main
 
     .times ,
     .last__times{
-        gap: 35px;
+        gap: 7px;
     }
 
 
