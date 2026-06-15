@@ -874,12 +874,13 @@ main
     .cash {
         font-size: 1.7rem;
         line-height: 29.41px;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .set__title {
         font-size: 1.7rem;
         line-height: 29.41px;
+        font-weight: 400;
     }
 
     .koyuumeishi {

@@ -797,7 +797,7 @@ header
 .product__name {
  font-size: 1.4rem;
  /* font-family: Noto Sans CJK JP; */
- font-weight: 500;
+ font-weight: 400;
  line-height: 26.32px;
 }
 
@@ -833,6 +833,10 @@ li.pizza__txt__sample {
   /* padding-top: 16px ; */
 }
 
+.pizza__txt__sample {
+  border-bottom: 1px solid var(--black);
+}
+
 /* --- タイトル・値段・日本語名のブロック --- */
 .litle__caption {
   display: flex;
@@ -863,7 +867,7 @@ li.pizza__txt__sample {
   width: 100%;
   font-size: 1.4rem;
   margin: 6px 0 0;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* ==================  */
@@ -1078,7 +1082,7 @@ li.pizza__txt__sample {
 
   .mini__product__name {
     font-size: 1.5rem;
-    font-weight: 350;
+    font-weight: 400;
     line-height: 33.66px;
     letter-spacing: 0.36px;
     border-bottom: 1px solid var(--black);
@@ -1109,8 +1113,9 @@ li.pizza__txt__sample {
   }
 
   .pizza__txt__sample {
-     width: 48%; 
-      margin-bottom: 0; 
+    width: 48%; 
+    margin-bottom: 0; 
+    border-bottom: none;
   }
 
   .bfm {
@@ -1906,7 +1911,7 @@ li.pizza__txt__sample {
   .food__sample__down {
     gap:54px ;
     /* flex-direction: column; */
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
   }
 

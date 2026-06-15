@@ -920,7 +920,7 @@ header
 .product__name {
   font-size: 1.4rem;
   /* font-family: Noto Sans CJK JP; */
-  font-weight: 350;
+  font-weight: 400;
   line-height: 26.32px;
 }
 
@@ -1308,6 +1308,7 @@ header
 
 .span {
   font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .bottle__price {
