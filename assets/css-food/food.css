@@ -1330,7 +1330,7 @@ li.pizza__txt__sample {
   .noimg__dc__ot {
     justify-content: center;
     gap: 30px;
-    padding: 30px 3.9vw;
+    padding: 30px 4.6vw;
     background-color: rgba(230, 227, 227, 0.3);
     max-width: 403px;
     height: auto;
@@ -1511,15 +1511,17 @@ li.pizza__txt__sample {
     .ppp {
       display: flex;
       flex-direction: row;
-      gap: 112px;
+      gap: 95px;
       margin: 0 auto;
+      justify-content: center;
     }
 
     .uuu {
       display: flex;
       flex-direction: row;
-      gap: 112px;
+      gap: 95px;
       margin: 0 auto;
+      justify-content: center;
     }
 
     /* PCサラダの箱を牛すじと揃える */
@@ -1532,9 +1534,11 @@ li.pizza__txt__sample {
     }
 
     .lap .litle__caption__dc__ot {
-     gap: 65px;
+     gap: 69px;
     }
 
+
+  
   }
 
 
